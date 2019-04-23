@@ -1,0 +1,135 @@
+'GeosphereWeb.Bootstrap43:Content.Card':
+  superTypes:
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:Content.Image': true
+    'GeosphereWeb.Bootstrap43:Content.Button': true
+  ui:
+    label: 'Card'
+    icon: 'icon-id-card'
+    group: 'GeosphereWeb.Bootstrap43'
+    inspector:
+      groups:
+        card:
+          label: 'card'
+          position: 20
+  properties:
+    'cardTitle':
+      type: string
+      defaultValue: 'Card Title...'
+      ui:
+        label: 'card-title'
+        reloadIfChanged: true
+        inlineEditable: true
+    'cardText':
+      type: string
+      defaultValue: 'Card Text...'
+      ui:
+        label: 'card-text'
+        reloadIfChanged: true
+        inlineEditable: true
+    'alignment':
+      ui: ~
+    'hasSubtitle':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'hat Untertitel'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'hasButton':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'hat Button'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'subtitle':
+      type: string
+      defautlValue: 'my own Subtitle...'
+      ui:
+        reloadIfChanged: true
+    'cardHeader':
+      type: string
+      defautlValue: 'my own Header...'
+      ui:
+        reloadIfChanged: true
+    'hasHeader':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'hat Header'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'cardFooter':
+      type: string
+      defautlValue: 'my own Footer...'
+      ui:
+        reloadIfChanged: true
+    'hasFooter':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'hat Footer'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'cardStyle':
+      type: string
+      defaultValue: ''
+      reloadIfChanged: true
+      ui:
+        reloadIfChanged: true
+        label: 'Styles'
+        inspector:
+          group: 'card'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              primary:
+                label: 'primary'
+              secondary:
+                label: 'secondary'
+              success:
+                label: 'success'
+              info:
+                label: 'info'
+              warning:
+                label: 'warning'
+              danger:
+                label: 'danger'
+              link:
+                label: 'link'
+    'hasWhiteText':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Text in weiss'
+        reloadIfChanged: true
+        inspector:
+          group: 'card'
+################
+## Sichbarschaltung der Mixins importierten Eigenschaften
+    'bsstyles':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'bsoutline':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'btsize':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'btisblock':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'

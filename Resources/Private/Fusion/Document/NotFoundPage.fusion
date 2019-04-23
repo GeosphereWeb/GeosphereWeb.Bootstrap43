@@ -1,0 +1,16 @@
+/**
+ * NotFoundPage rendering for the GeosphereWeb.Bootstrap43 website
+ */
+prototype(GeosphereWeb.Bootstrap43:Document.NotFoundPage) < prototype(GeosphereWeb.Bootstrap43:Document.Page) {
+
+    #
+    # The page that is rendered here should always return the 404 status
+    # so all crawlers will understand that this is no normal content
+    #
+    prototype(Neos.Neos:Page) {
+        httpResponseHead {
+            statusCode = 404
+        }
+    }
+}
+

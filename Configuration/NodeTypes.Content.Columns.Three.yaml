@@ -1,0 +1,16 @@
+'GeosphereWeb.Bootstrap43:Content.Columns.Three':
+  superTypes:
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Footer': true
+  ui:
+    label: i18n
+    icon: 'icon-columns'
+    group: 'structure'
+    position: 400
+  childNodes:
+    column0:
+      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Column'
+    column1:
+      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Column'
+    column2:
+      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Column'

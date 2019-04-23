@@ -1,0 +1,267 @@
+###########################################################################
+###                   Bootstrap Mixin                                   ###
+###########################################################################
+
+###########################################################################
+# BootstrapColumns
+###########################################################################
+'GeosphereWeb.Bootstrap43:BootstrapColumns':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        'column':
+          label: 'Columnstyle'
+          icon: 'icon-columns'
+          position: 100
+  properties:
+    'colums_sm':
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Column small (sm-)'
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+             '':
+               label: 'none'
+             'col-sm-1':
+               label: 'col-sm-1'
+             'col-sm-2':
+               label: 'col-sm-2'
+             'col-sm-3':
+                label: 'col-sm-3'
+             'col-sm-4':
+               label: 'col-sm-4'
+             'col-sm-5':
+               label: 'col-sm-5'
+             'col-sm-6':
+               label: 'col-sm-6'
+             'col-sm-7':
+               label: 'col-sm-7'
+             'col-sm-8':
+               label: 'col-sm-8'
+             'col-sm-9':
+               label: 'col-sm-9'
+             'col-sm-10':
+               label: 'col-sm-10'
+             'col-sm_-1':
+               label: 'col-sm-11'
+             'col-sm-12':
+               label: 'col-sm-12'
+    'colums_md':
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Column Mid (col-md-)'
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+             '':
+               label: 'none'
+             'col-md-1':
+               label: 'col-md-1'
+             'col-md-2':
+               label: 'col-md-2'
+             'col-md-3':
+                label: 'col-md-3'
+             'col-md-4':
+               label: 'col-md-4'
+             'col-md-5':
+               label: 'col-md-5'
+             'col-md-6':
+               label: 'col-md-6'
+             'col-md-7':
+               label: 'col-md-7'
+             'col-md-8':
+               label: 'col-md-8'
+             'col-md-9':
+               label: 'col-md-9'
+             'col-md-10':
+               label: 'col-md-10'
+             'col-md-11':
+               label: 'col-md-11'
+             'col-md-12':
+               label: 'col-md-12'
+    'colums_lg':
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Column Large (col-lg-)'
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+             '':
+               label: 'none'
+             'col-lg-1':
+               label: 'col-lg-1'
+             'col-lg-2':
+               label: 'col-lg-2'
+             'col-lg-3':
+                label: 'col-lg-3'
+             'col-lg-4':
+               label: 'col-lg-4'
+             'col-lg-5':
+               label: 'col-lg-5'
+             'col-lg-6':
+               label: 'col-lg-6'
+             'col-lg-7':
+               label: 'col-lg-7'
+             'col-lg-8':
+               label: 'col-lg-8'
+             'col-lg-9':
+               label: 'col-lg-9'
+             'col-lg-10':
+               label: 'col-lg-10'
+             'col-lg-11':
+               label: 'col-lg-11'
+             'col-lg-12':
+               label: 'col-lg-12'
+    'colums_xl':
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Column Large (col-lg-)'
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+             '':
+               label: 'none'
+             'col-xl-1':
+               label: 'col-xl-1'
+             'col-xl-2':
+               label: 'col-xl-2'
+             'col-xl-3':
+                label: 'col-xl-3'
+             'col-xl-4':
+               label: 'col-xl-4'
+             'col-xl-5':
+               label: 'col-xl-5'
+             'col-xl-6':
+               label: 'col-xl-6'
+             'col-xl-7':
+               label: 'col-xl-7'
+             'col-xl-8':
+               label: 'col-xl-8'
+             'col-xl-9':
+               label: 'col-xl-9'
+             'col-xl-10':
+               label: 'col-xl-10'
+             'col-xl-11':
+               label: 'col-xl-11'
+             'col-xl-12':
+               label: 'col-xl-12'
+
+###########################################################################
+# Bootstrap Button BootstrapContextualClasses Mixin
+###########################################################################
+'GeosphereWeb.Bootstrap43:BootstrapContextualClasses':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        style:
+          label: 'Styles'
+          icon: 'icon-pencil-ruler'
+          position: 100
+  properties:
+    'bsstyles':
+      type: string
+      defaultValue: 'primary'
+      ui:
+        label: 'Styles'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              primary:
+                label: 'primary'
+              secondary:
+                label: 'secondary'
+              success:
+                label: 'success'
+              info:
+                label: 'info'
+              warning:
+                label: 'warning'
+              danger:
+                label: 'danger'
+              link:
+                label: 'link'
+
+###########################################################################
+# Bootstrap Button BootstrapBtnOutline Mixin
+###########################################################################
+'GeosphereWeb.Bootstrap43:BootstrapBtnOutline':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        'style':
+          label: 'Styles'
+          icon: 'icon-pencil-ruler'
+          position: 100
+  properties:
+    'bsoutline':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'is Outline'
+        inspector:
+          group: 'style'
+          editorOptions:
+            disabled: false
+
+###########################################################################
+# Bootstrap Button Size Mixin
+###########################################################################
+'GeosphereWeb.Bootstrap43:BootstrapBtnSize':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        'style':
+          label: 'Styles'
+          icon: 'icon-pencil-ruler'
+          position: 100
+  properties:
+    'btsize':
+      type: string
+      defaultValue: ''
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Button Size'
+        inspector:
+          group: 'style'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            placeholder: 'Select Sizing Options'
+            values:
+              'btn-lg':
+                label: 'large'
+              'btn-sm':
+                label: 'small'
+    'btisblock':
+      type: boolean
+      defaultValue: false
+      ui:
+        reloadIfChanged: true
+        label: 'is Block'
+        inspector:
+          group: 'style'

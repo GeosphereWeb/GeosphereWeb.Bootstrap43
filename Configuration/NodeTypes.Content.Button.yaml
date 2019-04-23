@@ -1,0 +1,51 @@
+##
+# Adjust the "Bootstrap 4 - Button" node type:
+# Disable some of the layout options, override labels and set the default layout
+# /Private/Templates/NodeTypes/Button.html
+#
+'GeosphereWeb.Bootstrap43:Content.Button':
+  superTypes:
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:BootstrapContextualClasses': true #mixin
+    'GeosphereWeb.Bootstrap43:BootstrapBtnOutline': true #mixin
+    'GeosphereWeb.Bootstrap43:BootstrapBtnSize': true #mixin
+  ui:
+    label: 'Button'
+    icon: 'icon-square'
+    group: 'GeosphereWeb.Bootstrap43'
+    inlineEditable: true
+    inspector:
+      groups:
+        button:
+          label: 'Button'
+          position: 10
+          icon: 'icon-link'
+  properties:
+    'buttonText':
+      type: string
+      defaultValue: 'Button...'
+      ui:
+        label: 'ButtonText'
+        reloadIfChanged: true
+        inspector:
+          group: button
+        inlineEditable: TRUE
+        aloha:
+          placeholder: '<p>Enter text here</p>'
+          reloadIfChanged: true
+          autoparagraph: false
+          'format': {'removeFormat': TRUE}
+          'table': {}
+          'list': {}
+          'link': {}
+    'link':
+      type: string
+      ui:
+        label: 'Link Target'
+        inspector:
+          group: button
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: true
+#            nodeTypes: ['Neos.Neos:Shortcut']
+            placeholder: 'Paste a link, or type to search for nodes'

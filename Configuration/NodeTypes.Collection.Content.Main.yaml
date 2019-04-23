@@ -1,0 +1,6 @@
+##
+# The default content collection
+#
+'GeosphereWeb.Bootstrap43:Collection.Content.Main':
+  superTypes:
+    Neos.Neos:ContentCollection: true

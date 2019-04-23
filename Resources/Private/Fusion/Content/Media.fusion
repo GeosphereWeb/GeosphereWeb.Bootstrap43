@@ -1,0 +1,56 @@
+prototype(GeosphereWeb.Bootstrap43:Content.Media) < prototype(Neos.Neos:ContentComponent) {
+
+    alignment = ${q(node).property('alignment')}
+
+    titletext = Neos.Neos:Editable {
+        property = 'titletext'
+    }
+
+    bodytext = Neos.Neos:Editable {
+        property = 'bodytext'
+    }
+
+    //    mediaImage = Neos.NodeTypes:Image {
+//        templatePath = 'resource://Geosphere.Bootstrap4/Private/Templates/NodeTypes/Image.html'
+//        partialRootPath = 'resource://Geosphere.Bootstrap4/Private/Templates/NodeTypes/Partials'
+//        width = ${q(node).property('width')}
+//        height = ${q(node).property('height')}
+//        title = ''
+//        caption = ''
+//        allowCropping = true
+//        allowUpScaling = true
+//
+//        className = Neos.Fusion:Join {
+//            abstandVomText = 'mr-3'
+//            top = 'align-self-start'
+//            top.@if.isTop = ${q(node).property('alignment') == 'top'}
+//            center = 'align-self-center'
+//            center.@if.isCenter = ${q(node).property('alignment') =='center'}
+//            bottom = 'align-self-end'
+//            bottom.@if.isBottom = ${q(node).property('alignment') == 'bottom'}
+//            @glue = ' '
+//        }
+//    }
+
+    class = 'werner123'
+
+    renderer = afx`
+            <div class="media">
+                <GeosphereWeb.Bootstrap43:Content.Image class="werner"/>
+                <div class="media-body">
+                    <h5 class="mt-0">{props.titletext}</h5>
+                    {props.bodytext}
+                </div>
+            </div>
+        `
+
+    //    renderer = afx`
+//        <div class="media">
+//            {props.mediaImage}
+//            <div class="media-body">
+//                <h5 class="mt-0">{props.title}</h5>
+//                {props.bodytext}
+//            </div>
+//        </div>
+//    `
+}

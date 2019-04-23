@@ -1,0 +1,4 @@
+/**
+ * Homepage rendering for the GeosphereWeb.Bootstrap43 website
+ */
+prototype(GeosphereWeb.Bootstrap43:Document.Homepage) < prototype(GeosphereWeb.Bootstrap43:Document.LandingPage)
