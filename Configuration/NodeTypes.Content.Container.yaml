@@ -122,3 +122,11 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    'spacing':
+      type: string
+      defaultValue: 'my-5'
+      ui:
+        label: 'Spacing'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'

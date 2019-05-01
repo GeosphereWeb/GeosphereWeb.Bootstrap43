@@ -2,7 +2,7 @@ prototype(GeosphereWeb.Bootstrap43:Content.Container) < prototype(Neos.Neos:Cont
 
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
-        attributes.class = ' pt-5 pb-5'
+        attributes.class = 'werner'
     }
 
     @context.backgroundSize = ${q(node).property('backgroundSize')}

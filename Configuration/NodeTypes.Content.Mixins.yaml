@@ -2,6 +2,16 @@
 ###                   Bootstrap Mixin                                   ###
 ###########################################################################
 
+'GeosphereWeb.Bootstrap43:Bootstrap.Groups':
+  abstract: TRUE
+  ui:
+    inspector:
+      groups:
+        'style':
+          label: 'Button-Styles'
+          icon: 'icon-pencil-ruler'
+          position: 100
+
 ###########################################################################
 # BootstrapColumns
 ###########################################################################
@@ -168,14 +178,16 @@
 # Bootstrap Button BootstrapContextualClasses Mixin
 ###########################################################################
 'GeosphereWeb.Bootstrap43:BootstrapContextualClasses':
+  superTypes:
+    'GeosphereWeb.Bootstrap43:Bootstrap.Groups': true
   abstract: TRUE
-  ui:
-    inspector:
-      groups:
-        style:
-          label: 'Styles'
-          icon: 'icon-pencil-ruler'
-          position: 100
+#  ui:
+#    inspector:
+#      groups:
+#        style:
+#          label: 'Button-Styles'
+#          icon: 'icon-pencil-ruler'
+#          position: 100
   properties:
     'bsstyles':
       type: string
@@ -207,14 +219,16 @@
 # Bootstrap Button BootstrapBtnOutline Mixin
 ###########################################################################
 'GeosphereWeb.Bootstrap43:BootstrapBtnOutline':
+  superTypes:
+    'GeosphereWeb.Bootstrap43:Bootstrap.Groups': true
   abstract: TRUE
-  ui:
-    inspector:
-      groups:
-        'style':
-          label: 'Styles'
-          icon: 'icon-pencil-ruler'
-          position: 100
+#  ui:
+#    inspector:
+#      groups:
+#        'style':
+#          label: 'Button-Styles'
+#          icon: 'icon-pencil-ruler'
+#          position: 100
   properties:
     'bsoutline':
       type: boolean
@@ -231,14 +245,16 @@
 # Bootstrap Button Size Mixin
 ###########################################################################
 'GeosphereWeb.Bootstrap43:BootstrapBtnSize':
+  superTypes:
+    'GeosphereWeb.Bootstrap43:Bootstrap.Groups': true
   abstract: TRUE
-  ui:
-    inspector:
-      groups:
-        'style':
-          label: 'Styles'
-          icon: 'icon-pencil-ruler'
-          position: 100
+#  ui:
+#    inspector:
+#      groups:
+#        'style':
+#          label: 'Button-Styles'
+#          icon: 'icon-pencil-ruler'
+#          position: 100
   properties:
     'btsize':
       type: string

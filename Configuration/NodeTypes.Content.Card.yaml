@@ -1,8 +1,18 @@
 'GeosphereWeb.Bootstrap43:Content.Card':
   superTypes:
+#    'Neos.Neos:ContentCollection': true
     'Neos.Neos:Content': true
     'GeosphereWeb.Bootstrap43:Content.Image': true
     'GeosphereWeb.Bootstrap43:Content.Button': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.CardStyle': true
+#    'Neos.NodeTypes.BaseMixins:TextMixin': true
+  childNodes:
+    'CardItems':
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'GeosphereWeb.Bootstrap43:Constraint.Content.Card': true
   ui:
     label: 'Card'
     icon: 'icon-id-card'
@@ -20,13 +30,13 @@
         label: 'card-title'
         reloadIfChanged: true
         inlineEditable: true
-    'cardText':
-      type: string
-      defaultValue: 'Card Text...'
-      ui:
-        label: 'card-text'
-        reloadIfChanged: true
-        inlineEditable: true
+#    'cardText':
+#      type: string
+#      defaultValue: 'Card Text...'
+#      ui:
+#        label: 'card-text'
+#        reloadIfChanged: true
+#        inlineEditable: true
     'alignment':
       ui: ~
     'hasSubtitle':
@@ -86,7 +96,7 @@
       reloadIfChanged: true
       ui:
         reloadIfChanged: true
-        label: 'Styles'
+        label: 'Card Styles'
         inspector:
           group: 'card'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
@@ -115,6 +125,14 @@
         reloadIfChanged: true
         inspector:
           group: 'card'
+    'cssClass':
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'CSS Klasse'
+        reloadIfChanged: true
+        inspector:
+          group: 'card'
 ################
 ## Sichbarschaltung der Mixins importierten Eigenschaften
     'bsstyles':
@@ -133,3 +151,14 @@
       ui:
         inspector:
           hidden: 'ClientEval:node.properties.hasButton ? false : true'
+
+
+
+##
+# Constraint-supertype that makes contents available in Cards
+#
+# this allows to define the usage on the content nodetypes and
+# is recommended if a collection contains many different types
+#
+'GeosphereWeb.Bootstrap43:Constraint.Content.Card':
+  abstract: true

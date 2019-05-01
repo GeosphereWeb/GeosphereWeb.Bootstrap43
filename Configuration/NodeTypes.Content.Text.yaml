@@ -4,6 +4,7 @@
     'Neos.NodeTypes.BaseMixins:TextMixin': true
     'GeosphereWeb.Bootstrap43:Constraint.Content.Carousel': true
     'GeosphereWeb.Bootstrap43:Constraint.Content.Column': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Card': true
   ui:
     label: i18n
     icon: 'icon-file-text'

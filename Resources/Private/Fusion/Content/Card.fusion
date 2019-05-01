@@ -3,13 +3,20 @@ prototype(GeosphereWeb.Bootstrap43:Content.Card) < prototype(Neos.Neos:ContentCo
     //    prototype(Neos.Neos:Content -> Braucht EIN Template
     ///////////////////////////////////////
 
+    contentItems = Neos.Neos:ContentCollection {
+        nodePath = 'CardItems'
+        attributes.class {
+           cardtext = 'card-text'
+        }
+    }
+
     cardTitle = Neos.Neos:Editable {
         property = 'cardTitle'
     }
 
-    cardText = Neos.Neos:Editable {
-        property = 'cardText'
-    }
+//    cardText = Neos.Neos:Editable {
+//        property = 'cardText'
+//    }
 
     buttonText = Neos.Neos:Editable {
         property = 'buttonText'
@@ -27,10 +34,11 @@ prototype(GeosphereWeb.Bootstrap43:Content.Card) < prototype(Neos.Neos:ContentCo
     }
 
     cardClass = Neos.Fusion:Join {
-        stdClass = 'card'
-        cardStyle = ${q(node).property('cardStyle') ? 'bg-' + q(node).property('cardStyle') : null }
-        textInWeiss = ${q(node).property('hasWhiteText') ? 'text-white' : null }
-        @glue = ' '
+        stdClass = 'card '
+        cardStyle = ${q(node).property('cardStyle') ? 'bg-' + q(node).property('cardStyle')+' ' : null }
+        textInWeiss = ${q(node).property('hasWhiteText') ? 'text-white'+' ' : null }
+        cssClass = ${q(node).property('cssClass') ? q(node).property('cssClass')+' ' : null }
+//        @glue = ' '
     }
 
     renderer = afx`
@@ -38,9 +46,9 @@ prototype(GeosphereWeb.Bootstrap43:Content.Card) < prototype(Neos.Neos:ContentCo
             <div @if.hatheader={props.hasHeader} class="card-header">{props.cardHeader}</div>
             <GeosphereWeb.Bootstrap43:Content.Image @if.hatheader={props.image} className="card-img-top"/>
             <div class="card-body">
-                <h5 class="card-title">{props.cardTitle}</h5>
-                <h6 @if.untertitel={props.hasSubtitle} class="card-subtitle mb-2 text-muted">{props.subtitle}</h6>
-                <p class="card-text">{props.cardText}</p>
+                <h5 class="card-title goe_card-title">{props.cardTitle}</h5>
+                <h6 @if.untertitel={props.hasSubtitle} class="card-subtitle mb-2">{props.subtitle}</h6>
+                {props.contentItems}
                 <GeosphereWeb.Bootstrap43:Content.Button @if.untertitel={props.hasButton} buttonText={props.buttonText}/>
             </div>
             <div @if.hatfooter={props.hasFooter} class="card-footer text-muted">{props.cardFooter}</div>

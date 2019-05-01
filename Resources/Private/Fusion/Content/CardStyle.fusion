@@ -1,9 +1,11 @@
 prototype(GeosphereWeb.Bootstrap43:Collection.Content.CardStyle) < prototype(Neos.Neos:ContentComponent) {
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
-        attributes.class = ${q(node).parent().property('cardStyle') + ' pt-3'}
+        attributes.class {
+            cardStyle = ${q(node).parent().property('cardStyle')}
+        }
     }
-
+    //        attributes.class = ${q(node).parent().property('cardStyle') + ' pt-3'}
     renderer = afx`
         {props.contentItems}
     `

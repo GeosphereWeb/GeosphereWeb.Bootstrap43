@@ -7,7 +7,7 @@
       constraints:
         nodeTypes:
           '*': false
-          'GeosphereWeb.Bootstrap43:Content.Card': true
+          'GeosphereWeb.Bootstrap43:Constraint.Content.CardStyle': true
   ui:
     label: 'Card Styles'
     group: 'GeosphereWeb.Bootstrap43'
@@ -37,3 +37,12 @@
                 label: 'card-deck'
               card-columns:
                 label: 'card-columns'
+
+##
+# Constraint-supertype that makes contents available in carousels
+#
+# this allows to define the usage on the content nodetypes and
+# is recommended if a collection contains many different types
+#
+'GeosphereWeb.Bootstrap43:Constraint.Content.CardStyle':
+  abstract: true

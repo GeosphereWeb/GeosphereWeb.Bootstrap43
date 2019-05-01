@@ -6,9 +6,19 @@ prototype(GeosphereWeb.Bootstrap43:Content.Text) < prototype(Neos.Neos:ContentCo
         property = 'text'
     }
 
+    textBearbeitet = ${String.pregReplace(this.text, "/(::)(.*)(::)/U",  "<i class=\"$2\"></i>")}
+
+    class = null
+
+    isVisualisationInBackend = ${site.context.inBackend ? true : false}
+
     renderer = afx`
-        <div>
+        <div @if.render={props.isVisualisationInBackend} class={props.class}>
             {props.text}
+        </div>
+        <div @if.render={!props.isVisualisationInBackend} class={props.class}>
+            {props.textBearbeitet}
         </div>
     `
 }
+
