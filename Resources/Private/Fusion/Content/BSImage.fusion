@@ -1,7 +1,7 @@
 ##
-# Figure fragment for text and textWithImage
+# "Image" element
 #
-prototype(GeosphereWeb.Bootstrap43:Content.Fragment.Image.Figure) < prototype(Neos.Fusion:Component) {
+prototype(GeosphereWeb.Bootstrap43:Content.BSImage) < prototype(Neos.Neos:ContentComponent) {
 
     image = Neos.Fusion:Case {
         asset {
@@ -21,20 +21,15 @@ prototype(GeosphereWeb.Bootstrap43:Content.Fragment.Image.Figure) < prototype(Ne
 
     alt = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : null}
     title = ${q(node).property('title') ? q(node).property('title') : null}
-    class = null
-
-    hasCaption = ${q(node).property('hasCaption')}
-    caption = Neos.Neos:Editable {
-        property = 'caption'
+    class = Neos.Fusion:Join {
+        test = ${Array.join(q(node).property('styleOptions'), ' ')}
+        test.@if.isSelected = ${q(node).property('styleOptions')}
+        test2 = ${q(node).property('aligning')}
+        test2.@if.isSelected = ${q(node).property('aligning')}
+        @glue = ' '
     }
 
     renderer = afx`
-        <figure class={props.class}>
-            <img src={props.image} title={props.title} alt={props.alt} />
-            <figcaption @if.has={props.hasCaption && props.caption}>
-                {props.caption}
-            </figcaption>
-        </figure>
+            <img src={props.image} title={props.title} alt={props.alt} class={props.class} />
     `
 }
-

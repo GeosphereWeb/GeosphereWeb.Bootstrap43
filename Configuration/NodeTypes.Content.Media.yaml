@@ -4,7 +4,8 @@
 'GeosphereWeb.Bootstrap43:Content.Media':
   superTypes:
     'Neos.Neos:Content': true
-    'GeosphereWeb.Bootstrap43:Content.Image': true
+    'GeosphereWeb.Bootstrap43:Content.BSImage': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Column': true
   label: "${'Media: ' + String.cropAtWord(String.trim(String.stripTags(String.pregReplace(q(node).property('title') || q(node).property('text') || ((I18n.translate(node.nodeType.label) || node.nodeType.name) + (node.autoCreated ? ' (' + node.name + ')' : '')), '/<br\\W*?\\/?>|\\x{00a0}|[[^:print:]]|\\s+/u', ' '))), 100, '...')}"
   ui:
     label: 'Media'

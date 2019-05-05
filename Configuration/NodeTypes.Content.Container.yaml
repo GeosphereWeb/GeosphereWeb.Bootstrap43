@@ -1,6 +1,7 @@
 'GeosphereWeb.Bootstrap43:Content.Container':
   superTypes:
     'Neos.Neos:Content': TRUE
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Footer': true
   childNodes:
     contentItems:
       type: 'Neos.Neos:ContentCollection'

@@ -2,7 +2,9 @@ prototype(GeosphereWeb.Bootstrap43:Content.Container) < prototype(Neos.Neos:Cont
 
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
-        attributes.class = 'werner'
+        attributes.class {
+            test = 'werner'
+        }
     }
 
     @context.backgroundSize = ${q(node).property('backgroundSize')}
@@ -16,8 +18,12 @@ prototype(GeosphereWeb.Bootstrap43:Content.Container) < prototype(Neos.Neos:Cont
 
     myClass = Neos.Fusion:Join {
         container = ${q(node).property('fluid') ? 'container-fluid' : 'container'}
+
         padding = ${q(node).property('padding') ? 'padding' : ''}
+        padding.@if.isPadding = ${q(node).property('padding')}
+
         textWhite = ${q(node).property('textWhite') ? 'text-white' : ''}
+        textWhite.@if.isTextWhite = ${q(node).property('textWhite')}
         @glue = ' '
     }
 
@@ -27,7 +33,8 @@ prototype(GeosphereWeb.Bootstrap43:Content.Container) < prototype(Neos.Neos:Cont
             renderer = Neos.Fusion:Join {
                 bgrUrl = ${'background:url(' + bgrImage + ') no-repeat ' + backgroundColor + ' ' + backgroundPosition + '; '}
                 webkits = ${'-webkit-background-size:' + backgroundSize + '; -moz-background-size:' + backgroundSize + '; -o-background-size:' + backgroundSize + '; background-size:' + backgroundSize + '; '}
-                @glue = ' '
+                werner = 'werner'
+                //                @glue = ' '
             }
         }
 

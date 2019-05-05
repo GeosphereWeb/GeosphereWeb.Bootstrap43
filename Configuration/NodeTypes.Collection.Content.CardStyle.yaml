@@ -37,6 +37,15 @@
                 label: 'card-deck'
               card-columns:
                 label: 'card-columns'
+    'cardClass':
+      type: string
+      defaultValue: ''
+      #      reloadUfChanged: true
+      ui:
+        reloadIfChanged: true
+        label: 'css Klassenname'
+        inspector:
+          group: 'settings'
 
 ##
 # Constraint-supertype that makes contents available in carousels

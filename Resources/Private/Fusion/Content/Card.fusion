@@ -36,9 +36,14 @@ prototype(GeosphereWeb.Bootstrap43:Content.Card) < prototype(Neos.Neos:ContentCo
     cardClass = Neos.Fusion:Join {
         stdClass = 'card '
         cardStyle = ${q(node).property('cardStyle') ? 'bg-' + q(node).property('cardStyle')+' ' : null }
+        cardStyle.@if.isSelected = ${q(node).property('cardStyle')}
+
         textInWeiss = ${q(node).property('hasWhiteText') ? 'text-white'+' ' : null }
+        textInWeiss.@if.isSelected = ${q(node).property('hasWhiteText')}
+
         cssClass = ${q(node).property('cssClass') ? q(node).property('cssClass')+' ' : null }
-//        @glue = ' '
+        cssClass.@if.isSelected = ${q(node).property('cssClass')}
+        @glue = ' '
     }
 
     renderer = afx`
