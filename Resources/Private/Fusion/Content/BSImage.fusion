@@ -8,6 +8,10 @@ prototype(GeosphereWeb.Bootstrap43:Content.BSImage) < prototype(Neos.Neos:Conten
             condition = ${q(node).property('image')}
             renderer = Neos.Neos:ImageUri {
                 asset = ${q(node).property('image')}
+                width = ${q(node).property('width')}
+                height = ${q(node).property('height')}
+                allowCropping = TRUE
+                allowUpScaling = TRUE
             }
         }
         dummy {
@@ -18,14 +22,14 @@ prototype(GeosphereWeb.Bootstrap43:Content.BSImage) < prototype(Neos.Neos:Conten
         }
     }
 
-
     alt = ${q(node).property('alternativeText') ? q(node).property('alternativeText') : null}
     title = ${q(node).property('title') ? q(node).property('title') : null}
     class = Neos.Fusion:Join {
-        test = ${Array.join(q(node).property('styleOptions'), ' ')}
-        test.@if.isSelected = ${q(node).property('styleOptions')}
-        test2 = ${q(node).property('aligning')}
-        test2.@if.isSelected = ${q(node).property('aligning')}
+        styleoption = ${Array.join(q(node).property('styleOptions'), ' ')}
+        styleoption.@if.isSelected = ${q(node).property('styleOptions')}
+        align = ${q(node).property('aligning')}
+        align.@if.isSelected = ${q(node).property('aligning')}
+        additionalClass = 'werner'
         @glue = ' '
     }
 

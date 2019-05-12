@@ -2,11 +2,32 @@
   superTypes:
     'Neos.Neos:Content': true
     'Neos.NodeTypes.BaseMixins:ImageMixin': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Carousel': true
   ui:
     label: 'BS-Image'
     icon: 'icon-picture'
     position: 300
   properties:
+    'width':
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'width'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editorOptions:
+            allowEmpty: true
+    'height':
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'height'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editorOptions:
+            allowEmpty: true
     'styleOptions':
       type: array
       ui:

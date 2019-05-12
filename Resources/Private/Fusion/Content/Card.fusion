@@ -46,10 +46,11 @@ prototype(GeosphereWeb.Bootstrap43:Content.Card) < prototype(Neos.Neos:ContentCo
         @glue = ' '
     }
 
+
     renderer = afx`
         <div class={props.cardClass}>
             <div @if.hatheader={props.hasHeader} class="card-header">{props.cardHeader}</div>
-            <GeosphereWeb.Bootstrap43:Content.Image @if.hatheader={props.image} className="card-img-top"/>
+            <GeosphereWeb.Bootstrap43:Content.BSImage @if.hatheader={props.image} class='card-img-top'/>
             <div class="card-body">
                 <h5 class="card-title goe_card-title">{props.cardTitle}</h5>
                 <h6 @if.untertitel={props.hasSubtitle} class="card-subtitle mb-2">{props.subtitle}</h6>
