@@ -1,0 +1,13 @@
+##
+# The teaser collection that allows only specific contents
+#
+'GeosphereWeb.Bootstrap43:Collection.Content.Teaser':
+  superTypes:
+    Neos.Neos:ContentCollection: true
+  constraints:
+    nodeTypes:
+      '*': false
+      'GeosphereWeb.Bootstrap43:Content.Headline': true
+      'GeosphereWeb.Bootstrap43:Content.Text': true
+      'GeosphereWeb.Bootstrap43:Content.ResponsiveImage': true
+      'GeosphereWeb.Bootstrap43:Content.Carousel': true

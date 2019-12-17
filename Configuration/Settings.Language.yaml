@@ -1,0 +1,13 @@
+
+Neos:
+  Flow:
+    i18n:
+      defaultLocale: en
+  Neos:
+    userInterface:
+      defaultLanguage: en
+      translation:
+        autoInclude:
+          GeosphereWeb.Bootstrap43:
+            - Main
+            - 'NodeTypes/*'

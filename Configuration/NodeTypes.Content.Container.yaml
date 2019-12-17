@@ -1,0 +1,133 @@
+'GeosphereWeb.Bootstrap43:Content.Container':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Footer': true
+  childNodes:
+    contentItems:
+      type: 'Neos.Neos:ContentCollection'
+  #      constraints:
+  #        nodeTypes:
+  #          'NeosRulez.Bootstrap:CarouselItem': FALSE
+  #          'NeosRulez.Bootstrap:AccordionItem': FALSE
+  #          'Neos.NodeTypes.AssetList:AssetList': FALSE
+  #          'Neos.NodeTypes.Navigation:Navigation': FALSE
+  #          'Neos.Neos:PluginView': FALSE
+  #          'Neos.NodeTypes.ColumnLayouts:Column': FALSE
+  #          'Neos.NodeTypes:TextWithImage': FALSE
+  ui:
+    label: 'Str_Container'
+    group: 'GeosphereWeb.Bootstrap43'
+    icon: 'icon-square-o'
+    #    label: i18n
+    #    group: 'bootstrapnodetypes'
+    #    icon: 'icon-square-o'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        settings:
+          label: 'settigs'
+          icon: 'icon-cog'
+  properties:
+    'backgroundColor':
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'backgroundColor'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'backgroundImage':
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'backgroundImage'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'backgroundSize':
+      defaultValue: 'cover'
+      type: string
+      ui:
+        label: 'backgroundSize'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: cover
+            values:
+              'cover':
+                label: 'cover'
+              'contain':
+                label: 'contain'
+              'auto':
+                label: 'auto'
+    'backgroundPosition':
+      defaultValue: 'center center'
+      type: string
+      ui:
+        label: 'backgroundPosition'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: left top
+            values:
+              'left top':
+                label: 'left top'
+              'left bottom':
+                label: 'left bottom'
+              'left center':
+                label: 'left center'
+              'center top':
+                label: 'center top'
+              'center bottom':
+                label: 'center bottom'
+              'center center':
+                label: 'center center'
+              'right top':
+                label: 'right top'
+              'right bottom':
+                label: 'right bottom'
+              'right center':
+                label: 'right center'
+    'padding':
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'padding'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'fluid':
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'fluid'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'textWhite':
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'textWhite'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'parallax':
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: 'parallax'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    'spacing':
+      type: string
+      defaultValue: 'py-5'
+      ui:
+        label: 'Spacing'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'

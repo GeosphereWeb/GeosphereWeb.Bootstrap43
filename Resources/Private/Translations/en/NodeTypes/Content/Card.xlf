@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="GeosphereWeb.Bootstrap43" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" >
+				<source>BS4 Card</source>
+			</trans-unit>
+			<trans-unit id="groups.card" >
+				<source>BS4 Card Grp</source>
+			</trans-unit>
+
+			<trans-unit id="properties.cardTitle" >
+				<source>Card Title</source>
+			</trans-unit>
+			<trans-unit id="properties.hasSubtitle" >
+				<source>hat Untertitel</source>
+			</trans-unit>
+			<trans-unit id="properties.hasButton" >
+				<source>hat Schaltfläche</source>
+			</trans-unit>
+			<trans-unit id="properties.hasHeader" >
+				<source>hat Header</source>
+			</trans-unit>
+			<trans-unit id="properties.hasFooter" >
+				<source>hat Fussbereich</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

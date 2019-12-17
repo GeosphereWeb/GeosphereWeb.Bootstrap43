@@ -1,0 +1,46 @@
+'GeosphereWeb.Bootstrap43:Content.Columns.Two':
+  superTypes:
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Footer': true
+    'GeosphereWeb.Bootstrap43:Content.Mixins.Breakpoints': true
+  ui:
+    label: i18n
+    icon: 'icon-columns'
+    group: 'structure'
+    position: 400
+#    inspector:
+#      groups:
+#        'columnItems':
+#          label: 'colums Items'
+  childNodes:
+    column0:
+      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Column'
+    column1:
+      type: 'GeosphereWeb.Bootstrap43:Collection.Content.Column'
+#  properties:
+#    'breakpoints':
+#      type: string
+#      defaultValue: 'md'
+#      ui:
+#        label: 'breakpoints'
+#        reloadIfChanged: true
+#        inspector:
+#          group: 'columnItems'
+#          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+#          editorOptions:
+#            values:
+#              xs:
+#                label: 'xs'
+#                #icon: 'icon-legal'
+#              sm:
+#                label: 'sm'
+#                #icon: 'icon-legal'
+#              md:
+#                label: 'md'
+#                #icon: 'icon-legal'
+#              lg:
+#                label: 'lg'
+#                #icon: 'icon-legal'
+#              xl:
+#                label: 'xl'
+#                #icon: 'icon-legal'

@@ -1,0 +1,21 @@
+##
+# "Text" element
+#
+prototype(GeosphereWeb.Bootstrap43:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+//    textBearbeitet = ${String.pregReplace(this.text, "/(::\")(.*)(\"::)/U",  "<i class=\"$2\"></i>")}
+    text.@process.fontAwesome = ${site.context.inBackend ? value : String.pregReplace(value, "/(::\")(.*)(\"::)/U",  "<i class=\"$2\"></i>")}
+    text.@process.replaceApex = ${String.pregReplace(value, '/APEX/', '<span class="firmname">APEX</span>')}
+
+    class = null
+
+    renderer = afx`
+        <div class={props.class}>
+            {props.text}
+        </div>
+    `
+}
+

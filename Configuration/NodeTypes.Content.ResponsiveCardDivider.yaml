@@ -1,0 +1,59 @@
+##
+# Adjust the "Bootstrap 4 - Button" node type:
+# Disable some of the layout options, override labels and set the default layout
+# /Private/Templates/NodeTypes/Button.html
+#
+'GeosphereWeb.Bootstrap43:Content.ResponsiveCardDivider':
+  superTypes:
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.CardStyle': true
+  ui:
+    label: 'ResponsiveCardDivider'
+    icon: 'icon-square'
+    group: 'GeosphereWeb.Bootstrap43'
+    inlineEditable: false
+    inspector:
+      groups:
+        settings:
+          label: 'Settings'
+          position: 10
+          icon: 'icon-link'
+  properties:
+    'divider-visible':
+      type: string
+      defaultValue: 'd-sm-block'
+      reloadIfChanged: true
+      ui:
+        reloadIfChanged: true
+        label: 'divider-visible (and smaller)'
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              d-sm-block:
+                label: 'd-sm-block'
+              d-md-block:
+                label: 'd-md-block'
+              d-lg-block:
+                label: 'd-lg-block'
+    'divider-invisible':
+      type: string
+      defaultValue: 'd-xl-none'
+      reloadIfChanged: true
+      ui:
+        reloadIfChanged: true
+        label: 'divider-invisible (and greater)'
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              d-md-none:
+                label: 'd-md-none'
+              d-lg-none:
+                label: 'd-lg-none'
+              d-xl-none:
+                label: 'd-xl-none'

@@ -1,0 +1,31 @@
+##
+# "FourColumn" element
+#
+prototype(GeosphereWeb.Bootstrap43:Content.Columns.Four) < prototype(Neos.Neos:ContentComponent) {
+    column0 = Neos.Neos:ContentCollection {
+        nodePath = 'column0'
+    }
+
+    column1 = Neos.Neos:ContentCollection {
+        nodePath = 'column1'
+    }
+
+    column2 = Neos.Neos:ContentCollection {
+        nodePath = 'column2'
+    }
+
+    column3 = Neos.Neos:ContentCollection {
+        nodePath = 'column3'
+    }
+
+    breakpoints = ${'col-' + q(node).property('breakpoints') + '-3'}
+
+    renderer = afx`
+        <div class="row">
+            <div class={props.breakpoints}>{props.column0}</div>
+            <div class={props.breakpoints}>{props.column1}</div>
+            <div class={props.breakpoints}>{props.column2}</div>
+            <div class={props.breakpoints}>{props.column3}</div>
+        </div>
+    `
+}

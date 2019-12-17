@@ -1,0 +1,11 @@
+##
+# "Image" element
+#
+prototype(GeosphereWeb.Bootstrap43:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+
+    renderer = afx`
+        <div>
+            <GeosphereWeb.Bootstrap43:Content.Fragment.Image.Figure />
+        </div>
+    `
+}

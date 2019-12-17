@@ -1,0 +1,32 @@
+prototype(GeosphereWeb.Bootstrap43:Content.Media) < prototype(Neos.Neos:ContentComponent) {
+
+    alignment = ${q(node).property('alignment')}
+
+    titleText = Neos.Neos:Editable {
+        property = 'titletext'
+    }
+
+    bodyText = Neos.Neos:Editable {
+        property = 'bodytext'
+    }
+
+    renderer = afx`
+            <div class="media py-3">
+                <GeosphereWeb.Bootstrap43:Content.ResponsiveImage />
+                <div class="media-body ml-2">
+                    <h5 class="mt-0">{props.titleText}</h5>
+                    {props.bodyText}
+                </div>
+            </div>
+        `
+
+    //    renderer = afx`
+//        <div class="media">
+//            {props.mediaImage}
+//            <div class="media-body">
+//                <h5 class="mt-0">{props.title}</h5>
+//                {props.bodytext}
+//            </div>
+//        </div>
+//    `
+}

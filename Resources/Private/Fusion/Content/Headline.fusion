@@ -1,0 +1,16 @@
+##
+# "Headline" element
+#
+prototype(GeosphereWeb.Bootstrap43:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+    title.@process.fontAwesome = ${site.context.inBackend ? value : String.pregReplace(value, "/(::)(.*)(::)/U",  "<i class=\"$2\"></i>")}
+//    titleNew = ${String.pregReplace(this.title, "/(::\")(.*)(\"::)/U",  "<i class=\"$2\"></i>")}
+
+    renderer = afx`
+        <div>
+            {props.title}
+        </div>
+    `
+}

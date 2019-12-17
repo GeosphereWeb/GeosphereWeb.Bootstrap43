@@ -1,0 +1,3 @@
+'Neos.NodeTypes.Html:Html':
+  superTypes:
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Column': true

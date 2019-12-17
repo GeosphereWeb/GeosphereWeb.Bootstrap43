@@ -1,0 +1,33 @@
+##
+# Declare nodetypes from Neos.NodeTypes abstract that are replaced
+# in the GeosphereWeb.Bootstrap43 package namespace
+#
+
+
+'Neos.NodeTypes:Headline':
+  abstract: true
+
+'Neos.NodeTypes:Text':
+  abstract: true
+
+'Neos.NodeTypes:Image':
+  abstract: true
+
+'Neos.NodeTypes:TextWithImage':
+  abstract: true
+
+'Neos.NodeTypes.ColumnLayouts:TwoColumn':
+  ui: ~
+  abstract: true
+
+'Neos.NodeTypes.ColumnLayouts:ThreeColumn':
+  ui: ~
+  abstract: true
+
+'Neos.NodeTypes.ColumnLayouts:FourColumn':
+  ui: ~
+  abstract: true
+
+
+#'Vendor.Site:Content.YourNodeTypeName':
+#  ui: ~

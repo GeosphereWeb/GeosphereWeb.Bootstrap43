@@ -1,0 +1,164 @@
+'GeosphereWeb.Bootstrap43:Content.Card':
+  superTypes:
+#    'Neos.Neos:ContentCollection': true
+    'Neos.Neos:Content': true
+    'GeosphereWeb.Bootstrap43:Content.Image': true
+    'GeosphereWeb.Bootstrap43:Content.Button': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.CardStyle': true
+#    'Neos.NodeTypes.BaseMixins:TextMixin': true
+  childNodes:
+    'CardItems':
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'GeosphereWeb.Bootstrap43:Constraint.Content.Card': true
+  ui:
+    label: i18n
+    icon: 'icon-id-card'
+    group: 'GeosphereWeb.Bootstrap43'
+    inspector:
+      groups:
+        card:
+          label: i18n
+          position: 20
+  properties:
+    'cardTitle':
+      type: string
+      defaultValue: 'Card Title...'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inlineEditable: true
+#    'cardText':
+#      type: string
+#      defaultValue: 'Card Text...'
+#      ui:
+#        label: 'card-text'
+#        reloadIfChanged: true
+#        inlineEditable: true
+    'alignment':
+      ui: ~
+    'hasSubtitle':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'hasButton':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n #'hat Button'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'subtitle':
+      type: string
+      defautlValue: 'my own Subtitle...'
+      ui:
+        reloadIfChanged: true
+    'cardHeader':
+      type: string
+      defautlValue: 'my own Header...'
+      ui:
+        reloadIfChanged: true
+    'hasHeader':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n #'hat Header'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'cardFooter':
+      type: string
+      defautlValue: 'my own Footer...'
+      ui:
+        reloadIfChanged: true
+    'hasFooter':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 180n #'hat Footer'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          group: 'card'
+    'cardStyle':
+      type: string
+      defaultValue: ''
+      reloadIfChanged: true
+      ui:
+        reloadIfChanged: true
+        label: i18n #'Card Styles'
+        inspector:
+          group: 'card'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              primary:
+                label: 'primary'
+              secondary:
+                label: 'secondary'
+              success:
+                label: 'success'
+              info:
+                label: 'info'
+              warning:
+                label: 'warning'
+              danger:
+                label: 'danger'
+              link:
+                label: 'link'
+    'hasWhiteText':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Text in weiss'
+        reloadIfChanged: true
+        inspector:
+          group: 'card'
+    'cssClass':
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'CSS Klasse'
+        reloadIfChanged: true
+        inspector:
+          group: 'card'
+################
+## Sichbarschaltung der Mixins importierten Eigenschaften
+    'bsstyles':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'bsoutline':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'btsize':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+    'btisblock':
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.hasButton ? false : true'
+
+
+
+##
+# Constraint-supertype that makes contents available in Cards
+#
+# this allows to define the usage on the content nodetypes and
+# is recommended if a collection contains many different types
+#
+'GeosphereWeb.Bootstrap43:Constraint.Content.Card':
+  abstract: true

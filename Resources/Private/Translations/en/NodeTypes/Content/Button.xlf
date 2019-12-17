@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="GeosphereWeb.Bootstrap43" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>BS4 Button ws</source>
+            </trans-unit>
+            <trans-unit id="properties.buttonText" xml:space="preserve">
+                <source>Beschriftung</source>
+            </trans-unit>
+            <trans-unit id="properties.link" xml:space="preserve">
+                <source>Button Link</source>
+            </trans-unit>
+
+            <trans-unit id="groups.button" xml:space="preserve">
+                <source>Button Grp</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

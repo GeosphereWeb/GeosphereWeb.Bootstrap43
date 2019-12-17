@@ -1,0 +1,71 @@
+'GeosphereWeb.Bootstrap43:Content.ResponsiveImage':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.NodeTypes.BaseMixins:ImageMixin': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Carousel': true
+    'GeosphereWeb.Bootstrap43:Constraint.Content.Column': true
+  ui:
+    label: 'Responsive-Image'
+    icon: 'icon-picture'
+    position: 300
+  properties:
+    'width':
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'width'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editorOptions:
+            allowEmpty: true
+    'height':
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'height'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editorOptions:
+            allowEmpty: true
+    'styleOptions':
+      type: array
+      ui:
+        label: 'Styling Options'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            # The next line is set automatically for type array
+            # multiple: true
+            allowEmpty: true
+            placeholder: 'Select Styling Options'
+            values:
+              'img-fluid':
+                label: 'Fluid'
+              'img-thumbnail':
+                label: 'Thumbnail'
+              'rounded':
+                label: 'Rounded'
+    'aligning':
+      type: string
+#        defaultValue: 'firstChildNode'
+      ui:
+        label: 'Aligning images'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              'float-left':
+                label: 'Float Left'
+#                icon: 'icon-legal'
+              'float-right':
+                label: 'Float Right'
+#                icon: 'icon-fire'
+              'mx-auto d-block':
+                label: 'Center'

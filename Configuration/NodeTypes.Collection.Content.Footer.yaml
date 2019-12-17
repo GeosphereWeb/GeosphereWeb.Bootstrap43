@@ -1,0 +1,22 @@
+##
+# The footer content collection
+#
+'GeosphereWeb.Bootstrap43:Collection.Content.Footer':
+  superTypes:
+    Neos.Neos:ContentCollection: true
+  constraints:
+    nodeTypes:
+      '*': false
+      'GeosphereWeb.Bootstrap43:Content.Headline': true
+      'GeosphereWeb.Bootstrap43:Content.Text': true
+      'GeosphereWeb.Bootstrap43:Content.Image': true
+      'GeosphereWeb.Bootstrap43:Constraint.Content.Footer': true
+
+##
+# Constraint-supertype that makes contents available
+#
+# this allows to define the usage on the content nodetypes and
+# is recommended if a collection contains many different types
+#
+'GeosphereWeb.Bootstrap43:Constraint.Content.Footer':
+  abstract: true
