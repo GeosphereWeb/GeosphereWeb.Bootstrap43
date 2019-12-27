@@ -6,7 +6,7 @@
         "neos/neos": "*",
         "neos/nodetypes": "*",
         "neos/fusion-afx": "*",
-        "carbon/link": "~1.4"
+        "carbon/link": "*"
     },
     "suggest": {
         "neos/seo": "*"
