@@ -6,16 +6,16 @@ prototype(GeosphereWeb.Bootstrap43:Content.Media) < prototype(Neos.Neos:ContentC
         property = 'titletext'
     }
 
-    bodyText = Neos.Neos:Editable {
-        property = 'bodytext'
-    }
+//    bodyText = Neos.Neos:Editable {
+//        property = 'bodytext'
+//    }
 
     renderer = afx`
             <div class="media py-3">
                 <GeosphereWeb.Bootstrap43:Content.ResponsiveImage />
                 <div class="media-body ml-2">
                     <h5 class="mt-0">{props.titleText}</h5>
-                    {props.bodyText}
+                    <GeosphereWeb.Bootstrap43:Content.Text />
                 </div>
             </div>
         `

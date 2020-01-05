@@ -9,9 +9,6 @@
     icon: 'icon-header'
     position: 900
   properties:
-    'title':
-      ui:
-        aloha:
-          'format':
-            'h4': true
-            'h5': true
+    title:
+      options:
+        silhouette: 'codeq.text.title'

@@ -1,12 +1,13 @@
 {
-    "description": "",
+    "description": "Basisinstallation für GeosphereWebseiten basierend auf Bootstrap",
     "type": "neos-package",
     "name": "geosphereweb/bootstrap43",
     "require": {
         "neos/neos": "*",
         "neos/nodetypes": "*",
         "neos/fusion-afx": "*",
-        "carbon/link": "*"
+        "carbon/link": "*",
+        "sitegeist/silhouettes": "~1.0"
     },
     "suggest": {
         "neos/seo": "*"
