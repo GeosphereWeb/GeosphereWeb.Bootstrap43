@@ -7,7 +7,7 @@
         "neos/nodetypes": "*",
         "neos/fusion-afx": "*",
         "carbon/link": "*",
-        "sitegeist/silhouettes": "~1.0"
+        "sitegeist/silhouettes": "dev"
     },
     "suggest": {
         "neos/seo": "*"
