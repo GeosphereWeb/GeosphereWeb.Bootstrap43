@@ -1,5 +1,0 @@
-prototype(GeosphereWeb.Bootstrap43:Document.Fragment.Content.Main) < prototype(Neos.Fusion:Component) {
-    renderer = Neos.Neos:PrimaryContent {
-        nodePath = 'main'
-    }
-}

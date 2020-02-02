@@ -3,11 +3,11 @@
     "type": "neos-package",
     "name": "geosphereweb/bootstrap43",
     "require": {
-        "neos/neos": "*",
-        "neos/nodetypes": "*",
-        "neos/fusion-afx": "*",
+        "neos/neos": "^5.1",
+        "neos/nodetypes": "^5.1",
+        "neos/fusion-afx": "~1.4",
         "carbon/link": "*",
-        "sitegeist/silhouettes": "~1.0"
+        "": ""
     },
     "suggest": {
         "neos/seo": "*"
